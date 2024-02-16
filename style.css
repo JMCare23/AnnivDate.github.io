@@ -1,0 +1,176 @@
+body {
+    background: #042e4b;
+      color: #fff;
+    font: 19px/1.5 'Fira Sans Extra Condensed', Helvetica, Helvetica Neue, Arial;
+    height: 100%;
+    width: 100%;
+
+    padding: 0;
+    margin: 0;
+  }
+  
+  body, figure, image {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .intro {
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/579121/sky-backr2.jpg') no-repeat;
+      background-size: cover;
+      height: 100vh;
+      position: relative;
+      z-index: -1;
+  }
+  .tulips {
+      bottom: -10px;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      z-index: 1;
+  }
+  
+  .stemEnd1, .stemEnd2, .stemEnd3, .stemEnd4 {
+    visibility:hidden;
+  }
+
+  body.yes .container{
+    display:none;
+  }
+
+  body.yes .confirm-dialog{
+    display: block;
+  }
+
+  .heart{
+    animation: heartbeat 1s infinite;
+    background: red;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+  }
+
+
+  .heart::before,
+  .heart::after{
+    content: '';
+    background-color: red;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  }
+
+  .heart::before{
+    top: -10px;
+    left: 0;
+  }
+
+  .heart::after{
+    top: 0;
+    left: 10px;
+  }
+
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.5);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .yes-gif{
+    width: 100px;
+  }
+
+  .container{
+    min-width: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #093b5f;
+    box-shadow: 5px 5px 5px #112533;
+    border-radius: 15px;
+  }
+
+  .container-text{
+    padding: 15px;
+  }
+
+  .container-text .title{
+    color: violet;
+    text-align: center;
+    font-size: 45px;
+    font-family: "Indie Flower", cursive;
+  }
+
+  .confirm-actions{
+    display: flex;
+    column-gap: 10px;
+  }
+
+  .confirm-actions button{
+    width: 100%;
+    cursor: grab;
+    font-size: 25px;
+    border: none;
+    padding: 10px;
+    color: whitesmoke;
+    font-weight: 600;
+    border-radius: 8px;
+    position: relative;
+  }
+
+  .confirm-actions button:hover{
+    cursor: pointer;
+  }
+  
+  .confirm-actions .btn-yes{
+    background-color: lightblue;
+  }
+  
+  .confirm-actions .btn-no{
+    background-color: lightcoral;
+  }
+
+  .confirm-dialog{
+
+    display: none;
+    min-width: 800px;
+    position: absolute;
+    margin-bottom: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    font-size: 45px;
+  }
+  
+
+  .dialog-container{
+    padding: 15px 5px;
+  }
+
+  .dialog-container img{
+    width: 300px;
+    height: 300px;
+    position: center;
+    margin-left: 250px;
+  }
+
+  .dialog-container p{
+    color: violet;
+    text-align: center;
+    font-size: 45px;
+    font-family: "Indie Flower", cursive;
+  }
+  
